@@ -48,7 +48,9 @@ html = f"""<!DOCTYPE html>
 body {{ font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
        background: #0f172a; color: #e2e8f0; padding: 2rem;
        max-width: 720px; margin: 0 auto; line-height: 1.6; }}
-h1 {{ font-size: 1.6rem; color: #22d3ee; margin-bottom: .3rem; }}
+h1 {{ font-size: 1.6rem; color: #22d3ee; margin: 0; }}
+.brand {{ display: flex; align-items: center; gap: 12px; margin-bottom: .3rem; }}
+.logo {{ width: 40px; height: 40px; object-fit: contain; }}
 .subtitle {{ color: #94a3b8; margin-bottom: 1.5rem; font-size: .9rem; }}
 ul {{ list-style: none; }}
 li {{ margin-bottom: .5rem; }}
@@ -68,7 +70,10 @@ footer {{ margin-top: 2rem; color: #64748b; font-size: .8rem; }}
 </style>
 </head>
 <body>
-<h1>📈 興櫃股票篩選</h1>
+<div class="brand">
+  <img src="logo.png" alt="logo" class="logo">
+  <h1>興櫃股票篩選</h1>
+</div>
 <p class="subtitle">資料源：櫃買中心興櫃當日行情表 ｜ 最後更新：{gen}</p>
 
 <div class="modes">

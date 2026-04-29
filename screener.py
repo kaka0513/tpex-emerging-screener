@@ -228,6 +228,8 @@ HTML_TEMPLATE = r"""<!doctype html>
   header { padding: 18px 24px; border-bottom:1px solid var(--border);
            display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
   h1 { font-size: 20px; margin:0; color: var(--accent); }
+  .brand { display:flex; align-items:center; gap:12px; }
+  .logo { width:36px; height:36px; object-fit:contain; }
   .meta { color: var(--muted); font-size: 13px; }
   .modes { display:flex; gap:6px; }
   .modes button { padding:8px 16px; border-radius:8px; border:1px solid var(--border);
@@ -272,7 +274,10 @@ HTML_TEMPLATE = r"""<!doctype html>
 </head>
 <body>
 <header>
-  <h1>興櫃股票篩選</h1>
+  <div class="brand">
+    <img src="logo.png" alt="logo" class="logo">
+    <h1>興櫃股票篩選</h1>
+  </div>
   <div class="modes">
     <button data-mode="leisure" class="active">悠哉選</button>
     <button data-mode="breakout">短線飆股</button>
