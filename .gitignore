@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+venv/
+emerging_screener.html
+sample.csv
+*.csv
+.claude/
